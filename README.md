@@ -1,2 +1,5 @@
-# dotnet-strategy-pattern-using-dependency-injection
-This repository contains a simple example about how easy is to build a Strategy pattern in C# using dependency injection
+# How to build a Strategy pattern using dependency injection with .NET
+
+This repository contains an example that shows how easy is to build a Strategy pattern using dependency injection with .NET
+
+Work in progress
