@@ -95,7 +95,7 @@ foreach (var strategy in strategies)
 ## How does it work
 
 It's really simple.    
-- Register every Strategy behaviour (which implements the same interface).
+- Register every Strategy behaviour (either manually or using Reflection).
 
 ```csharp
 builder.Services.AddTransient<IStrategy, ToUpperStrategy>();
@@ -111,7 +111,7 @@ builder.Services.AddTransient<IStrategy, ReverseStrategy>();
 public class StrategyContext : IStrategyContext
 {
     private readonly IEnumerable<IStrategy> _strategies;
-    
+
     public StrategyContext(IEnumerable<IStrategy> strategies)
     {
         _strategies = strategies;
