@@ -1,18 +1,12 @@
 ﻿namespace StrategyPatternWithDIExamples.Strategy.Context
 {
-    public class StrategyContext : IStrategyContext
+    public class StrategyContext(IEnumerable<IStrategy> strategies) : IStrategyContext
     {
-        private readonly IEnumerable<IStrategy> _strategies;
-        public StrategyContext(IEnumerable<IStrategy> strategies)
-        {
-            _strategies = strategies;
-        }
-
         public string ExecuteStrategy(
             string strategyName, 
             string message)
         {
-            var instance = _strategies.FirstOrDefault(x =>
+            var instance = strategies.FirstOrDefault(x =>
                 x.Name.Equals(strategyName, StringComparison.InvariantCultureIgnoreCase));
 
             return instance is not null ?

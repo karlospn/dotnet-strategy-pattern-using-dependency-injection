@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPatternWithDIExamples", "src/StrategyPatternWithDIExamples.csproj", "{903EF375-3B37-4C47-8081-9A5B772F5D9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyPatternWithDIExamples", "src\StrategyPatternWithDIExamples.csproj", "{903EF375-3B37-4C47-8081-9A5B772F5D9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyPatternWithDIExamples.Tests", "test\StrategyPatternWithDIExamples.Tests\StrategyPatternWithDIExamples.Tests.csproj", "{73F8269D-1C26-449E-8756-304D8A80B45B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{903EF375-3B37-4C47-8081-9A5B772F5D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{903EF375-3B37-4C47-8081-9A5B772F5D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{903EF375-3B37-4C47-8081-9A5B772F5D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73F8269D-1C26-449E-8756-304D8A80B45B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F8269D-1C26-449E-8756-304D8A80B45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F8269D-1C26-449E-8756-304D8A80B45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F8269D-1C26-449E-8756-304D8A80B45B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
