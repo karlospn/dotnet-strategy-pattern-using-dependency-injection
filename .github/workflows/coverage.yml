@@ -1,27 +1,28 @@
-name: Publish Code Coverage
-
-on:
+name: Upload Code Coverage
+  
+on: 
   workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
+  
+jobs:  
+  build:  
+    runs-on: ubuntu-latest  
+  
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true 
           fetch-depth: 1   
 
-    - name: Test
-        run: dotnet test --collect:"XPlat Code Coverage" --results-directory coverage
+      - name: Test
+          run: dotnet test --collect:"XPlat Code Coverage" --results-directory coverage
 
-    - name: Code Coverage Summary Report
-      uses: irongut/CodeCoverageSummary@v1.3.0
-      with:
-        filename: 'coverage/*/coverage.cobertura.xml'
-        badge: true
-        format: 'markdown'
-        output: 'both'
-    
-    - name: Write to Job Summary
-      run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+      - name: Code Coverage Summary Report
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        with:
+          filename: 'coverage/*/coverage.cobertura.xml'
+          badge: true
+          format: 'markdown'
+          output: 'both'
+      
+      - name: Write to Job Summary
+        run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
