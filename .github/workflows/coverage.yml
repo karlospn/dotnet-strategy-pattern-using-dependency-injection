@@ -2,7 +2,7 @@ name: Upload Code Coverage
   
 on:
   push:
-    branches: [ main ]
+    branches: [ feature/github-action ]
   workflow_dispatch:
   
 jobs:  
